@@ -1,0 +1,14 @@
+<strong><p class="example-p">Line Width</p></strong>
+<mat-slider thumbLabel color="primary" [max]="100"
+[min]="1" [(ngModel)]="widthChanged" (onChange)="strokeWidth" ></mat-slider>
+
+
+<strong><p class="example-p">Options</p></strong>
+<div *ngFor="let type of shapeTypeArray">
+    <input   margin='10px' type="radio" value="shapeTypeArray.indexOf(type)"
+            [checked]="typeRef === shapeTypeArray.indexOf(type)"
+            (change)="onTypeSelectionChange(shapeTypeArray.indexOf(type))"
+            name="active-type">
+            <i class="input">{{type}}</i>
+</div>
+

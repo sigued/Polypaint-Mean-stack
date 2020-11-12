@@ -1,0 +1,43 @@
+<button mat-icon-button title="Color Palette"  *ngIf="!paletteIsUsing" (click)="openPalette()">
+    <mat-icon>color_lens</mat-icon>
+  </button>
+  <button mat-icon-button title="Swap Color" (click)="swapColor()">
+      <mat-icon>cached</mat-icon>
+  </button>
+<mat-drawer-container class="border" mode="side" opened>
+  <fieldset>
+            <div *ngIf="paletteIsUsing">
+              <app-color-picker (notify)="onNotify($event)"></app-color-picker>
+              <button class="closeButton" mat-stroked-button title="Close"  (click)="closePalette()">Close</button>
+            </div>
+            <div class="color-content">
+              <div class="last-color-content">
+                <div *ngFor="let color of colorService.lastColorsTab" [ngStyle]="{'background-color':color}" (click)="setColorFromLastSelectedColor(color)"></div></div>
+            <div>
+                <label class="color-label">
+                  <input type="radio" value="1" [checked]="active === 1" (change)="onActiveSelectionChange(1)" name="active-color">
+                  <strong>Primary</strong>
+                </label>
+                <input type="text" [value]="primaryColor" (input)="primaryColor = $event.target.value" class="color-input" (change)="primaryColorChange()">
+                <div [ngStyle]="{'background-color':primaryColor}" class="color-value-content"></div>
+              </div>
+              <div>
+                  <label class="color-label">
+                      <input type="radio" value="1" [checked]="active === 2" (change)="onActiveSelectionChange(2)" name="active-color">
+                      <strong>Secondary</strong>
+                    </label>
+                <input type="text" [value]="secondColor" (input)="secondColor = $event.target.value" class="color-input" (change)="secondColorChange()">
+                <div [ngStyle]="{'background-color':secondColor}" class="color-value-content"></div>
+              </div>
+              <div>
+                  <label class="color-label">
+                      <input type="radio" value="3" [checked]="active === 3" (change)="onActiveSelectionChange(3)" name="active-color">
+                      <strong>Background</strong>
+                    </label>
+              </div>
+            </div>
+          </fieldset>
+</mat-drawer-container>
+
+
+

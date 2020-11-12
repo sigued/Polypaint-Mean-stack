@@ -1,0 +1,41 @@
+<div class="col-sm-8 col-sm-offset-2" (window:resize)="onResize()">
+  <h2 class="example-p">Create a new drawing</h2>  
+  <form [formGroup]="newDrawingform" (ngSubmit)="onSubmitForm()">
+      <fieldset >
+       <p class="example-p">Height <input type="text" id="height" class="input" formControlName="height"></p>
+        <div *ngIf="heightError" class="invalid-feedback">
+            The height value must be positive. Maximum: 4000
+        </div>
+        <p class="example-p">Width <input type="text" id="width" class="input" formControlName="width"></p>
+        <div *ngIf="widthError" class="invalid-feedback">
+            The width value must be positive. Maximum: 4000
+        </div>
+        <p class="example-p">Background color in Hexadecimal<input class="input" type="checkbox" formControlName="hexaIsChecked" (click)="onCheck($event)"></p>
+      <div *ngIf="!hexIsChecked">   
+        <p class="example-p">Background color in RBGA: <input class="input" type="text" id="backgroundColor" [value]="color" (input)="color = $event.target.value" class="form-control"  formControlName="backgroundColor"></p>
+        <div *ngIf="backgroundColorError" class="invalid-feedback">
+           <i>Verify the format. Ex.: rgba(255,255,255,1) or <br> Select a color on the palette</i>
+        </div>
+        <div>
+            <button mat-icon-button title="Open Color Palette"  *ngIf="!paletteIsUsing" (click)="openPalette()">
+                <mat-icon>color_lens</mat-icon>
+              </button>
+        </div> 
+          <div class="picker" *ngIf="paletteIsUsing">
+              <app-color-picker (notify)="onNotify($event)"></app-color-picker>
+          </div>
+      </div>
+      <div *ngIf="hexIsChecked">
+        <label class="example-p" for="backgroundColorHexa">Enter Color Value: </label>  
+        <input type="text" id="backgroundColorHexa" class="form-control" [disabled]="!hexIsChecked" formControlName="backgroundColorHexa">
+        <div *ngIf="backgroundColorHexaError" class="invalid-feedback">
+          <i>Verify the format. Ex.: #00bfff ou 00bfff</i>
+        </div>
+      </div>
+     <div>
+      <button mat-stroked-button class="button" [disabled]="newDrawingform.invalid">Save</button>
+      <button mat-stroked-button  class="button" (click)="onClose()">Cancel</button>
+    </div>
+  </fieldset> 
+  </form>
+  </div>

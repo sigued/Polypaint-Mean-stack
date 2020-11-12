@@ -1,0 +1,27 @@
+<div [hidden]='hide' *ngIf="drawingExist(); else elseBlock">
+    <h2 class="example-p" mat-dialog-title>Export as</h2>
+    <fieldset>
+    <div mat-dialog-content *ngFor="let format of formatTypeArray">
+        <label>
+            <input type="radio" value="formatTypeArray.indexOf(format)"
+                [checked]="format === formatTypeArray.indexOf(format)"
+                (change)="onFormatSelectionChange(formatTypeArray.indexOf(format))" name="active-type">
+            <i class="example-p"> {{format}} </i>
+        </label>
+    </div>
+    <div mat-dialog-actions>
+        <button class="button" mat-stroked-button (click)="toggle()">Export</button>
+        <button class="button" mat-stroked-button (click)="onClose()">Close</button>
+    </div>
+    </fieldset>
+</div>
+
+<div *ngIf='hide'>
+    <h2 class="example-p" mat-dialog-title>Are you sure you want to export this drawing ?</h2>
+    <button class="button" mat-stroked-button (click)="exportFile()">Yes</button>
+    <button class="button" mat-stroked-button (click)="onClose()">No</button>
+</div>
+<ng-template #elseBlock>
+    <h2 class="example-p" mat-dialog-title>Can't detect a drawing. Please draw something</h2>
+    <button class="add" mat-stroked-button (click)="onClose()">OK</button>
+</ng-template>

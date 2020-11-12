@@ -1,0 +1,17 @@
+
+                <strong><p class="example-p">Line Width</p></strong>
+                <mat-slider thumbLabel color="primary" max="100"
+                min="1" [(ngModel)]="width" (change)="widthChanged(width)" ></mat-slider>
+        
+                
+
+        <div *ngIf="(drawpageService.active === 1)">
+                <strong><p class="example-p">Options</p></strong>
+            <div *ngFor="let texture of textureArray">
+                    <input type="radio" value="textureArray.indexOf(texture)"
+                        [checked]="textureRef === textureArray.indexOf(texture)"
+                        (change)="onTextureSelectionChange(textureArray.indexOf(texture))"
+                            name="active-texture">
+                <i class="input">{{texture}}</i>
+            </div>
+        </div>

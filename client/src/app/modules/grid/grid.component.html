@@ -1,0 +1,15 @@
+<mat-drawer-container class ="drawer" mode="side">
+                        <p class="example-p">Activate Grid<input type="checkbox" (click)="onCheck($event)" [checked]="getActivationStatus()">
+                        </p>
+                        <div *ngIf = "getActivationStatus()">
+                        <i class="example-p">Height
+                        <input type="number" min="5" max="50" value={{height}} (change)="triggerResizeHeight()" (input)="height = $event.target.value">
+                        </i>
+                        <i class="example-p">Width
+                        <input type="number" min="5" max="50" value={{width}} (change)="triggerResizeWidth()" (input)="width = $event.target.value">
+                        </i>
+                        <i class="example-p">Opacity</i>
+                        <mat-slider thumbLabel color="primary" [max]="max"
+                        [min]="5" [(ngModel)]="opacityChanged" (onChange)="opacity" ></mat-slider>
+                        </div>
+</mat-drawer-container>

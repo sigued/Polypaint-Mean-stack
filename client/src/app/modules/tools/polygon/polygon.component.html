@@ -1,0 +1,20 @@
+<div>
+    <div>
+        <strong><p class="example-p">Line Width</p></strong>
+        <mat-slider thumbLabel color="primary" [max]="100"
+        [min]="1" [(ngModel)]="widthChanged" (onChange)="weight" ></mat-slider>
+    </div>
+    <div>
+        <strong class="example-p">Faces</strong><input type="number" min="3" max="12" value="3" (change)="nbSideChanged()" (input)="nbSide = $event.target.value">
+    </div>
+  <strong><p class="example-p">Options</p></strong>
+  <div *ngFor="let type of typeArray">
+    <label>
+      <input type="radio" value="typeArray.indexOf(type)"
+            [checked]="typeRef === typeArray.indexOf(type)"
+            (change)="typeChanged(typeArray.indexOf(type))"
+            name="active-type">
+      <i class="input">{{type}}</i>
+    </label>
+  </div>
+</div>

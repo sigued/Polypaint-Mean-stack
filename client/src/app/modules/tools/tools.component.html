@@ -1,0 +1,100 @@
+<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+<mat-drawer-container mode="side">
+    <div class="tool-content">
+            <strong><p class="example-p">Tools</p></strong>
+            <mat-list-item>
+                    <button title='Pencil' (click)="onActiveSelectionChange(0)" mat-icon-button >
+                            <mat-icon >create</mat-icon>
+                    </button>
+                    <button title='Brush'(click)="onActiveSelectionChange(1)" mat-icon-button>
+                            <mat-icon>brush</mat-icon>
+                    </button>
+                    <button title='Pen' (click)="onActiveSelectionChange(10)" mat-icon-button>
+                            <span style='font-size:23px;'>&#10002;</span>
+                    </button>
+                    <button title='Feather' (click)="onActiveSelectionChange(13)" mat-icon-button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-feather"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17.5" y1="15" x2="9" y2="15"></line></svg>
+                    </button>
+                    <button title='Spray'(click)="onActiveSelectionChange(12)" mat-icon-button>
+                                <img width=20 height=20  src="/assets/images/spray.svg">
+                    </button>
+                    <button title='Line' (click)="onActiveSelectionChange(3)" mat-icon-button>
+                            <mat-icon>show_chart</mat-icon>
+                    </button>
+                    <button title='Rectangle'(click)="onActiveSelectionChange(2)" mat-icon-button>
+                            <mat-icon>crop_landscape</mat-icon>
+                    </button>
+                    <button title='Ellipse' (click)="onActiveSelectionChange(4)" mat-icon-button>
+                            <mat-icon>panorama_fish_eye</mat-icon>
+                    </button>
+                    <button title='Polygon' (click)="onActiveSelectionChange(5)" mat-icon-button>
+                            <mat-icon>signal_cellular_null</mat-icon>
+                    </button>
+                    <button title='Text'(click)="onActiveSelectionChange(11)" mat-icon-button>
+                                <mat-icon>title</mat-icon>
+                        </button>
+                        <button title='Stamps' (click)="onActiveSelectionChange(6)" mat-icon-button>
+                                <img width=20 height=20  src="/assets/images/stamp.svg">
+                        </button>
+                    <br>
+                    <button title='Select' (click)="onActiveSelectionChange(8)" mat-icon-button>
+                                <mat-icon>near_me</mat-icon>
+                    </button>
+                    <button title='Apply Color' (click)="onActiveSelectionChange(14)" mat-icon-button>
+                            <mat-icon>invert_colors</mat-icon>
+                    </button>
+                    <button title='Extract Color' (click)="onActiveSelectionChange(7)" mat-icon-button>
+                            <mat-icon>colorize</mat-icon>
+                    </button>
+                    <button title='Paint Bucket' (click)="onActiveSelectionChange(15)" mat-icon-button>
+                            <img width=25 height=25  src="/assets/images/fill.svg">
+                    </button>
+            </mat-list-item>
+        
+        <div *ngIf="(toolActive === 0 || toolActive === 1)">
+            <app-pencil></app-pencil>
+        </div>
+
+        <div *ngIf="(toolActive === 2)">
+            <app-rectangle></app-rectangle>
+        </div>
+
+        <div *ngIf="(toolActive === 3)">
+            <app-line></app-line>
+        </div>
+
+        <div *ngIf="(toolActive === 4)">
+            <app-ellipse></app-ellipse>
+        </div>
+
+        <div *ngIf="(toolActive === 5)">
+            <app-polygon></app-polygon>
+        </div>
+
+        <div *ngIf="(toolActive === 6)">
+            <app-etampe></app-etampe>
+        </div>
+        <div *ngIf="(toolActive === 7)">
+        </div>
+
+        <div *ngIf="(toolActive === 8)">
+            <app-select></app-select>
+        </div>
+
+        <div *ngIf="(toolActive === 10)">
+            <app-pen></app-pen>
+        </div>
+        <div *ngIf="(toolActive === 11)">
+            <app-text></app-text>
+        </div>
+        <div *ngIf="(toolActive === 12)">
+            <app-spray></app-spray>
+        </div>
+        <div *ngIf="(toolActive === 13)">
+            <app-plume></app-plume>
+        </div>
+        <div *ngIf="(toolActive === 15)">
+            <app-bucket-tool></app-bucket-tool>
+        </div>
+    </div>
+</mat-drawer-container>

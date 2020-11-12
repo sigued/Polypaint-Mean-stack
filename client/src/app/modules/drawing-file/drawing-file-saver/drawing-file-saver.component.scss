@@ -1,0 +1,44 @@
+.feedback{
+  color: green;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.image{
+  padding-bottom: 10px;
+  margin-left: 20px;
+}
+
+.invalid-feedback{
+  font-size: 14px;
+  color: red;
+  font-family: Roboto, Arial, sans-serif;
+}
+.example-p {
+  margin: 10px;
+  color: rgb(82, 82, 82);
+  font-family: Roboto, Arial, sans-serif;
+}
+h2{
+  text-align: center;
+}
+.input{
+  width: 40px;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.button{
+  margin-left:65px;
+}
+.add{
+  margin-left:20px;
+}
+.add:focus{
+  color:red;
+ }
+
+.button:focus{
+ color:red;
+}
+.mat-icon {
+  font-size: 24px;
+}

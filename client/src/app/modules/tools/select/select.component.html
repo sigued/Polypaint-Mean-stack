@@ -1,0 +1,7 @@
+<div *ngIf="(selectService.selectedElement.length > 0 || handlerSelectionService.isCutting)">
+    <div *ngFor="let button of selectOptions">
+        <button mat-stroked-button (click)="buttonClicked(selectOptions.indexOf(button))" width="100%">{{button}}</button>
+    </div>
+</div>
+
+<button mat-stroked-button (click)="selectAll()">Select All</button>

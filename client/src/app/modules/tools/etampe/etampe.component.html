@@ -1,0 +1,16 @@
+        <strong><p class="example-p">Size</p></strong>
+        <mat-slider thumbLabel color="primary" [max]="100"
+        [min]="50" [(ngModel)]="echelle" (change)="scaleChanged(echelle)"></mat-slider>
+
+        <mat-icon title="Rotate">rotate_right</mat-icon>
+        <mat-slider thumbLabel color="primary" [max]="360"
+        [min]="0" [(ngModel)]="rotationAngle" (change)="rotationAngleChanged(rotationAngle)" ></mat-slider>
+
+  <strong><p class="example-p">Options</p></strong>
+  <div *ngFor="let stamp of stampArray">
+        <input type="radio" value="stampArray.indexOf(stamp)"
+               [checked]="stampRef === stampArray.indexOf(stamp)"
+               (change)="onStampSelectionChange(stampArray.indexOf(stamp))"
+                name="active-stamp">
+        <i class="input">{{stamp}}</i>
+

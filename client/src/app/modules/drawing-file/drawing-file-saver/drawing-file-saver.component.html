@@ -1,0 +1,56 @@
+<div class="col-sm-8 col-sm-offset-2" *ngIf='!hide'> 
+    <form [formGroup]="newDrawingFileform" (ngSubmit)="onSwitch()"> 
+        <h2 class="example-p">Save a drawing</h2>
+        <fieldset [disabled]="displaySaverMessage | async">
+        <div>
+            <p class="example-p" for="name">Name <input type="text" id="name" class="form-control" formControlName="name"></p>
+            <div *ngIf="nameError && hasBeenTouched" class="invalid-feedback">
+              <i class="invalid-feedback">The drawing's name must contain at least a character.<br>Maximum length : 20</i>
+            </div>
+        </div> 
+        <div formArrayName="tags">
+            <p class="example-p">Your Tags: </p>
+                <div  *ngFor="let tagControl of getTags().controls; let i = index">
+                  <i class="example-p">Tag:</i><input type="text" class="form-control" [formControlName]="i">
+                  <button mat-icon-button (click)="onDeleteTags(i)">
+                        <mat-icon>remove</mat-icon>
+                    </button>
+
+                  <div *ngIf="getTags().controls[i].errors" class="invalid-feedback">
+                    <i class="invalid-feedback">The tag's name must contain at least a character.<br> Maximum length : 20</i>
+                </div>
+                </div>
+                <button mat-stroked-button class="add" type="button" [disabled]="isSaveOnLocal" (click)="onAddTags()">Add a tag</button>
+        </div>
+        <div>
+            <p class="example-p">Your drawing</p>
+            <div class="image" [innerHTML] = "outerHtlm | safeHtml"></div>
+        </div>
+        <div *ngIf="outerHtlmError">
+                <i class="invalid-feedback">Can't save an empty drawing.</i>
+        </div>
+        <div *ngIf="!isSaveOnLocal">
+            <div *ngIf="isOnErrors" class="invalid-feedback">
+                <i>Oups! Error! Verify your connection to the server.</i>
+            </div>
+            <div *ngIf="displaySaverMessage | async" class="feedback">
+                <i class="example-p">Saving in progress...</i>
+            </div>
+        </div>
+        
+
+        <div>
+            <i class="example-p">Saving Locally</i><input type="checkbox" (click)="store($event)" [checked]="isSaveOnLocal">
+        </div>
+        <div>
+        <button mat-stroked-button class="button" [disabled]="newDrawingFileform.invalid">Save</button>
+        <button mat-stroked-button class="button" (click)="onClose()">Cancel</button>
+        </div>
+    </fieldset> 
+    </form>
+</div>
+<div *ngIf='hide'>
+    <h2 class="example-p" mat-dialog-title>Are you sure you want to save this drawing?</h2>
+    <button mat-stroked-button class="button" (click)="onSaveDrawFile()">Yes</button>&nbsp;
+    <button mat-stroked-button (click)="onSwitch()">No</button>
+</div>

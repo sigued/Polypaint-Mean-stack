@@ -1,0 +1,30 @@
+.invalid-feedback{
+    color: red;
+    font-family: Roboto, Arial, sans-serif;
+  }
+  .example-p {
+    margin: 10px;
+    color: rgb(82, 82, 82);
+    font-family: Roboto, Arial, sans-serif;
+  }
+ 
+  h2{
+    text-align: center;
+    }
+  .input{
+    width: 40px;
+    font-family: Roboto, Arial, sans-serif;
+  }
+
+  .picker{
+    margin-left:40px;
+  }
+  .button{
+    margin-left:65px;
+  }
+  .button:focus{
+   color:red;
+  }
+  .mat-icon {
+    font-size: 40px;
+}

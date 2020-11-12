@@ -1,0 +1,15 @@
+<div class="col-sm-8 col-sm-offset-2 magnet"> 
+    <form [formGroup]="magnestismForm" (ngSubmit)="getActivationStatus()">
+        <div>
+            <label>Activate magnetism</label>&nbsp;
+            <input type="checkbox" (click)="store($event)" [checked]="getActivationStatus()">
+        </div>
+        <div class="form-group space" *ngIf="getActivationStatus()">
+            <label for="corner">Corner:</label>&nbsp;
+            <select class="custom-select" (change)="changeCorner($event)" formControlName="corner">
+                <option value="" disabled>Choose a corner</option>
+                <option *ngFor="let corner of corners" [ngValue]="corner">{{corner}}</option>
+            </select>
+        </div>
+    </form>
+</div>

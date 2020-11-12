@@ -1,0 +1,118 @@
+<h2 class="example-p">User Guide</h2>  
+ <div *ngIf=showPencil>
+        <img src="/assets/gifs/pencil.gif" width=520 height=300>
+        <p class="example-p">When using the pencil, you can change the line width with Line Width bar</p>
+    </div>
+    <div *ngIf=showPencilBrush>
+        <img src="/assets/gifs/pencilBrush.gif" width=520 height=300>
+        <p class="example-p">When using the pencil brush, you can change the line width with Line Width bar</p>
+    </div>
+    <div *ngIf=showPen>
+        <img src="/assets/gifs/pen.gif" width=520 height=300>
+        <p class="example-p">When using the pen, you can change the line maximal and minimal width with their respective bars</p>
+    </div>
+    <div *ngIf=showPipette>
+        <img src="/assets/gifs/pipette.gif" width=520 height=300>
+        <p class="example-p">When using the pipette tool, left click to extract the color of any element and store it as your primary color </p>
+          <p class="example-p">You can also right click to extract the color of any element and store it as your secondary color</p>
+    </div>
+    <div *ngIf=showRectangle>
+        <img src="/assets/gifs/rectangle.gif" width=520 height=300>
+        <p class="example-p">When using the rectangle tool, you can change the line width with Line Width bar</p>
+        <p class="example-p">You can also choose between 3 options to set the contour and the fill</p>
+        <p class="example-p">You may want to draw a square? Press shift while using this tool</p>
+    </div>
+    <div *ngIf=showEllipse>
+        <img src="/assets/gifs/ellipse.gif" width=520 height=300>
+        <p class="example-p">When using the ellipse tool, you can change the line width with Line Width bar</p>
+        <p class="example-p">You can also choose between 3 options to set the contour and the fill</p>
+        <p class="example-p">You may want to draw a circle? Press shift while using this tool</p>
+    </div>
+    <div *ngIf=showLine>
+        <img src="/assets/gifs/line.gif" width=520 height=300>
+        <p class="example-p">Start line: click, Add new segment: click, Finish line: double-click</p>
+        <p class="example-p">When using the line tool, you can change the line width with Line Width bar</p>
+        <p class="example-p">You can choose between a full line or a dashed line by selecting the type</p>
+        <p class="example-p">You can choose between 3 options to set the syle of the line junctions</p>
+        <p class="example-p">For the point-style junctions you have to set the diameter</p>
+        <p class="example-p">By pressing backspace, you remove the curent line segment</p>
+        <p class="example-p">By pressing escape, you delete the current line</p>
+        <p class="example-p">You may want to close your the path? Press shift while finishing a line</p>
+    </div>
+    <div *ngIf=showFeather>
+        <img src="/assets/gifs/feather.gif" width=520 height=300>
+        <p class="example-p">When using the feather tool, you can change the line width with the Line Width bar</p>
+       <p class="example-p">You can choose the feather angle with the Rotation angle bar</p>
+       <p class="example-p">You can also choose the feather angle with a mouse scroll to increment the angle by 15 degrees</p>
+       <p class="example-p">By pressing alt and mouse scorlling, you can increment the angle by 1 degree</p>
+    </div>
+    <div *ngIf=showSpray>
+        <img src="/assets/gifs/spray.gif" width=520 height=300>
+        <p class="example-p">When using the spray tool, you can change the spray diameter with the Line Width bar</p>
+       <p class="example-p">You can choose the number of pixels you color at a time with the Pixels number bar</p>
+    </div>
+    <div *ngIf=showStamps>
+        <img src="/assets/gifs/stamps.gif" width=520 height=300>
+        <p class="example-p">When using the stamp tool, you can change the stamp size with the size bar</p>
+       <p class="example-p">You can choose the stamp angle with the rotation angle bar</p>
+       <p class="example-p">You can also choose the stamp angle with a mouse scroll to increment the angle by 15 degrees</p>
+       <p class="example-p">By pressing alt and mouse scorlling, you can increment the angle by 1 degree</p>
+       <p class="example-p">You can choose between 5 Options to set the desired stamp tu use</p>
+    </div>
+    <div *ngIf=showText>
+        <img src="/assets/gifs/text.gif" width=520 height=300>
+        <p class="example-p">When using the text tool, you can press anywhere on the drawing zone to create a text element</p>
+       <p class="example-p">You can change the font with the Font Family selection field</p>
+       <p class="example-p">You can choose the font size with the Font Size input field</p>
+       <p class="example-p">You can choose whether bold or italc text or both</p>
+       <p class="example-p">You can also choose between 3 Options to set the text alignement</p>
+    </div>
+    <div *ngIf=showPolygon>
+        <img src="/assets/gifs/polygon.gif" width=520 height=300>
+        <p class="example-p">When using the polygon tool, you can change the line width with the Line Width bar</p>
+       <p class="example-p">You can choose the polygon's number of faces with the Faces input field </p>
+       <p class="example-p">You can also choose between 3 Options to set the contour and the fill</p>
+    </div>
+    <div *ngIf=showSelect>
+        <img src="/assets/gifs/select.gif" width=520 height=300>
+        <p class="example-p">When using the selection tool, you have to left click and expand the selection zone to select the disired elements</p>
+                <p class="example-p">You can use the clip board on the selected elements to copy, cut, past, duplicate and delete</p>
+                <p class="example-p">You can also select all the items of the drawing zone with the Select All button</p>
+    </div>
+    <div *ngIf=showPaintBucket>
+            <img src="/assets/gifs/paintbucket.gif" width=520 height=300>
+            <p class="example-p">When using the bucket tool, you can left click on any closed area to fill it with the selected primary color</p>
+                  <p class="example-p">You can also set a contour and it's width with the Line Width bar</p>
+    </div>
+    <div *ngIf=showEraser>
+            <img src="/assets/gifs/eraser.gif" width=520 height=300>
+            <p class="example-p">When using the eraser tool, you can change the eraser size with the Size bar</p>
+            <p class="example-p">While left clicking, you can drag the eraser over the elements to erase</p>
+    </div>
+    <div *ngIf=showApplicator>
+            <img src="/assets/gifs/colorapplicator.gif" width=520 height=300>
+            <p class="example-p">When using the color applicator tool, set the primary color of an element with a left click on it</p>
+           <p class="example-p">You can also set the secondary color of an element with a right click on it</p>
+    </div>
+    <p class="example-p"><strong>Tools</strong>(Keyboard shortcut)</p>
+<fieldset>
+        <input name="tools" type="radio" (click)="displayGif(0)"><i class="example-p">Pencil (c)</i>
+        <input name="tools" type="radio" (click)="displayGif(1)"><i class="example-p">Pencil Brush (w)</i>
+        <input name="tools" type="radio" (click)="displayGif(2)"><i class="example-p">Pen (y)</i>
+        <input name="tools" type="radio"  (click)="displayGif(3)"><i class="example-p">Feather (p)</i>
+        <br>
+        <input name="tools" type="radio"   (click)="displayGif(4)"> <i class="example-p">Spray (a)</i>
+        <input name="tools" type="radio"  (click)="displayGif(5)"> <i class="example-p">Line (l)</i>
+        <input name="tools" type="radio"   (click)="displayGif(6)"><i class="example-p">Rectangle (1)</i>
+        <input name="tools" type="radio"   (click)="displayGif(7)"><i class="example-p">Ellipse (2)</i>
+        <br>
+        <input name="tools" type="radio"   (click)="displayGif(8)"><i class="example-p">Polygon (3)</i>
+        <input name="tools" type="radio"  (click)="displayGif(9)"><i class="example-p">Color Applicator (r)</i>
+        <input name="tools" type="radio"  (click)="displayGif(10)"><i class="example-p">Pipette (i)</i>
+        <input name="tools" type="radio"  (click)="displayGif(11)"><i class="example-p">Paint bucket (b)</i>
+        <br>
+        <input name="tools" type="radio"   (click)="displayGif(12)"> <i class="example-p">Text (t)</i>
+        <input name="tools" type="radio"  (click)="displayGif(13)"><i class="example-p">Stamps (o)</i>
+        <input name="tools" type="radio"   (click)="displayGif(14)"><i class="example-p">Select (s)</i>
+        <input name="tools" type="radio"   (click)="displayGif(15)"><i class="example-p">Eraser (e)</i>
+    </fieldset>

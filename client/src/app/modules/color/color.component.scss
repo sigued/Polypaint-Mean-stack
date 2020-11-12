@@ -1,0 +1,61 @@
+.color-label {
+    display:block;
+    color: rgb(82, 82, 82);
+    font-family: Roboto, Arial, sans-serif;
+}
+
+.color-input {
+    width : 100px;
+    height : 25px;
+}
+
+.last-color-content div {
+    display:inline-block;
+    width:15px;
+    height : 15px;
+    margin : 2px;
+    border : solid 1px gray;
+}
+
+.color-content{
+    width: 240px;
+    padding: 8px;
+}
+
+.color-value-content{
+    width: 120px;
+    height : 25px;
+    margin : 2px;
+    border : solid 1px gray;
+    float: left;
+}
+
+.mat-icon{
+    font-size: 25px;
+}
+button{
+    margin-top: 8px;
+    color: rgb(82, 82, 82);
+}
+input[type=range]{
+    width: 125px;
+    margin-top: 5px;
+}
+
+
+.border{
+    background-color: lightgray;
+}
+.example-p {
+    margin: 10px;
+    color: rgb(82, 82, 82);
+    font-family: Roboto, Arial, sans-serif;
+}
+
+.closeButton{
+    width:100%;
+    color:black;
+}
+.closeButton:focus{
+    color:red;
+}

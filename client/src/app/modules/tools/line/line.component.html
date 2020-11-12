@@ -1,0 +1,23 @@
+
+        <strong><p class="example-p">Line Width</p></strong>
+        <mat-slider thumbLabel color="primary" [max]="50"
+        [min]="1" [(ngModel)]="widthChanged" (onChange)="width" ></mat-slider>
+
+        <strong><p class="example-p">Type</p></strong>
+      <div *ngFor="let type2 of dashedLineArray">
+            <input  type="radio" value="dashedLineArray.indexOf(type2)"
+                    [checked]="dashedLine === dashedLineArray.indexOf(type2)"
+                    (change)="dashedLineChanged(dashedLineArray.indexOf(type2))"
+                    name="active-type2">
+            <i class="input">{{type2}}</i>
+      </div>
+    <strong><p class="example-p">Junction</p></strong>
+  <div *ngFor="let type of lineJunctionArray">
+          <input  type="radio" value="lineJunctionArray.indexOf(type)"
+                  [checked]="junctionType === lineJunctionArray.indexOf(type)"
+                  (change)="junctionTypeChanged(lineJunctionArray.indexOf(type))"
+                  name="active-type">
+          <i class="input">{{type}}</i>
+  </div>
+      <strong class="example-p">Diameter</strong><input type="number" min="5" max="50" [value]="junctionDiameter" (change)="diameterChanged()" (input)="junctionDiameter = $event.target.value">
+

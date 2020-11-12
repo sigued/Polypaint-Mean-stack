@@ -1,0 +1,43 @@
+:host {
+  display: block;
+  width: 230px;
+  padding: 10px;
+}
+.color-wrapper {
+  display: flex;
+  height: 150px;
+}
+
+.input-wrapper {
+  margin-top: 25px;
+  display: flex;
+  border-radius: 1px;
+  border: 1px solid rgb(82, 82, 82);
+  padding: 5px;
+  height: 32px;
+  justify-content: center;
+}
+
+.color-div {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgb(82, 82, 82);
+}
+
+.text {
+  flex: 1;
+  color:rgb(82, 82, 82);
+  font-family: Roboto, Arial, sans-serif;
+  line-height: 32px;
+}
+
+button{
+  margin-left:75px;
+}
+button:active{
+  color:red;
+}
+input[type=range]{
+  width: 230px;
+}

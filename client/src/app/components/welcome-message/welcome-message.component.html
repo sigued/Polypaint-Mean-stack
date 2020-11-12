@@ -1,0 +1,33 @@
+ 
+<div class="modal" [ngStyle]="{'display': displayValue}">
+
+    <div class="Boite acceuil">
+
+        <div class="messAccueil">
+           <strong>
+                Hi!
+                Welcome to DrawPad 1.4
+           </strong>
+        </div>
+        <div class="boiteboutoncheck">
+                <p class="example-p">
+                        Need help ? Check the user guide for tool tips and tricks.
+                <br>
+                <br>
+                <button  mat-stroked-button (click)="openDialogUserguide()" id="dialog">
+                    User Guide
+                </button> 
+                </p> 
+                <div class="example-p">
+                    Check this box to never see this message again. <input class="check" type="checkbox" name="checkbox acceuil" value="False" (click)="store($event)">
+                    <br>
+                    <br>
+
+                    <button class="button" mat-stroked-button (click)="fermer()">Close</button>
+                </div>
+
+        </div>
+    </div>
+
+</div>
+    

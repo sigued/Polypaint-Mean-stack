@@ -1,0 +1,76 @@
+<app-welcome-message></app-welcome-message>
+<div>
+    <mat-sidenav-container >
+        <mat-sidenav mode="side" opened>
+            <mat-nav-list mode="side" >
+                <mat-list-item title ="menu" (click)="sidenav.toggle()"  routerLink="toolsPage">
+                    <button mat-icon-button>
+                        <mat-icon>menu</mat-icon>
+                    </button>
+                </mat-list-item>
+                <mat-list-item title ="Tools" (click)="sidenav.open()" routerLink="toolsPage">
+                    <button mat-icon-button>
+                        <mat-icon>build</mat-icon>
+                    </button>
+                </mat-list-item>
+                <mat-list-item title ="Undo" (click)="undo()" >
+                    <button mat-icon-button [disabled]="disabledUndo()">
+                        <mat-icon>undo</mat-icon>
+                    </button>
+                </mat-list-item>
+                <mat-list-item title ="Redo" (click)="redo()">
+                <button mat-icon-button [disabled]="disabledRedo()">
+                    <mat-icon>redo</mat-icon>
+                </button>
+                </mat-list-item>
+                <mat-list-item title ="Eraser" (click)="sidenav.open()" routerLink="eraserPage">
+                    <img width=20 height=20  src="/assets/images/eraser.svg">
+                </mat-list-item>
+                <mat-list-item title ="Grid" (click)="sidenav.open()" routerLink="gridPage">
+                <button mat-icon-button>
+                    <mat-icon>grid_on</mat-icon>
+                </button>
+                </mat-list-item>
+                <mat-list-item title ="Magnetism" (click)="sidenav.open()" routerLink="magnetismPage">
+                        <img width=22 height=22  src="/assets/images/magnet.svg">
+                </mat-list-item>
+                <mat-list-item title ="Create a new drawing" (click)="open(0)" id="dialog">
+                    <button mat-icon-button>
+                        <mat-icon>add</mat-icon>
+                    </button>
+                  </mat-list-item>    
+                <mat-list-item  title ="Save a drawing" (click)="open(1)" id="dialog">
+                      <button mat-icon-button>
+                            <img width=20 height=20  src="/assets/images/save-file-option.svg">
+                      </button>
+                  </mat-list-item>             
+                  <mat-list-item  title ="Upload a drawing" (click)="open(2)" id="dialog">
+                      <button mat-icon-button>
+                            <img width=20 height=20  src="/assets/images/upload1.svg">
+                      </button>
+                    </mat-list-item>    
+                    <mat-list-item  title ="Export a drawing" (click)="open(3)" id="dialog">
+                        <button mat-icon-button>
+                              <img width=20 height=20  src="/assets/images/upload.svg">
+                        </button>
+                      </mat-list-item>
+                      <mat-list-item  title ="User Guide" (click)="open(4)"id="dialog" >
+                          <button mat-icon-button>
+                              <mat-icon>help</mat-icon>
+                          </button>
+                      </mat-list-item>
+              </mat-nav-list>
+        </mat-sidenav>
+        <mat-drawer-container mode="side">
+            <mat-drawer mode="side" #sidenav>
+                <app-color></app-color>
+                <router-outlet></router-outlet>
+              </mat-drawer>
+              <mat-drawer-content mode="push" >
+                  <app-page-detail></app-page-detail>
+              </mat-drawer-content>
+            </mat-drawer-container>
+      </mat-sidenav-container>      
+</div>
+
+

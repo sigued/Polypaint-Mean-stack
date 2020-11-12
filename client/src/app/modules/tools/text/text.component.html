@@ -1,0 +1,29 @@
+<link href="https://fonts.googleapis.com/css?family=Solway&display=swap" rel="stylesheet">
+<mat-drawer-container class="drawer" mode="side">
+        <mat-form-field>
+                <mat-label>Font Family</mat-label>
+                <mat-select [(ngModel)]="changeFontFamily">
+                  <mat-option *ngFor="let font of fontFamillyArray" 
+                              (onChange)="changeFontFamily(fontFamillyArray.indexOf(font))" 
+                              [value]="fontFamillyArray.indexOf(font)">
+                    {{font.viewValue}}
+                    <i class="input">{{font}}</i>
+                  </mat-option>
+                </mat-select>
+        </mat-form-field>
+        <p class="example-p">Size
+        <input type="number" min="5" max="50" [value]="fontSize" (input)="fontSize = $event.target.value"
+            (change)="changeFontSize()"></p>
+        <strong class="example-p">Bold</strong><input type="checkbox" (click)="onCheckBold($event)">
+        <i class="example-p">Italic</i><input type="checkbox" (click)="onCheckItalic($event)">
+    
+        <div>
+        <mat-icon>format_align_left</mat-icon><input name="align" type="radio" (click)="onCheckLeft($event)">
+        </div>
+        <div>
+        <mat-icon>format_align_justify</mat-icon><input name="align" type="radio" (click)="onCheckCenter($event)">
+        </div>
+        <div>
+        <mat-icon>format_align_right</mat-icon><input name="align" type="radio" (click)="onCheckRight($event)">
+        </div>
+</mat-drawer-container>

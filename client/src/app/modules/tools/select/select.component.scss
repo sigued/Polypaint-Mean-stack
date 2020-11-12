@@ -1,0 +1,8 @@
+button{
+    width: 250px;
+    display: inline-block;
+    margin-left: 10px;
+}
+button:focus{
+    color:red;
+}

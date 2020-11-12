@@ -1,0 +1,43 @@
+.drawer {
+    width: 160px;
+    color: white;
+  }
+
+.tool-content > div{
+  margin-top: 20px;
+  width: 160px;
+  font-size: 1em;
+}
+
+.title{
+    display: block;
+}
+
+
+#texture-content > div{
+    margin : 10px;
+    font-size: 1em;
+}
+
+.mat-drawer-container {
+  background-color: lightgray;
+  width: 266px;
+  color: rgb(82, 82, 82);
+}
+
+.example-p {
+  margin: 10px;
+  color: rgb(82, 82, 82);
+  font-family: Roboto, Arial, sans-serif;
+}
+
+img{
+  color: rgb(82, 82, 82);
+}
+button:focus{
+  background:rgba(255, 0, 0, 0.598);
+}
+
+.selectedTool{
+  background:rgba(255, 0, 0, 0.598);
+}

@@ -1,0 +1,12 @@
+<div class=color-wrapper>
+  <app-color-palette [selectedGradient]="gradient" (color)="color = $event"></app-color-palette>
+  <app-color-slider (color)="gradient=$event" style="margin-left:16px"></app-color-slider>
+</div>
+<div class="input-wrapper">
+  <span class="text">{{color}}</span>
+  <div class="color-div" [ngStyle]="{'background-color': color || 'white'}"></div>
+</div>
+
+<input type="range" min="1" max="100" value="100" (change)="opacityChanged()" (input)="opacity = $event.target.value">
+
+<button mat-stroked-button title="Apply" (click)="notify.emit(color)">Apply</button>

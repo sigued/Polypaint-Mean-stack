@@ -1,0 +1,65 @@
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    font-family: Roboto, Arial, sans-serif;
+    width: 100%;
+  }
+  .title {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    color: rgb(82, 82, 82);
+    font-family: Roboto, Arial, sans-serif;
+  }
+  td, th {
+    width: 25%;
+  }
+
+  .butClose{
+
+    padding-top: 20px;
+  }
+
+  .erreurSer{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: red;
+    font-family: Roboto, Arial, sans-serif;
+  }
+
+  .formup{
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+  }
+
+  .mat-cell {
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+  }
+
+  .feedback{
+    color: green;
+    font-family: Roboto, Arial, sans-serif;
+  }
+
+  .example-p {
+    margin: 10px;
+    color: rgb(82, 82, 82);
+    font-family: Roboto, Arial, sans-serif;
+  }
+
+ h2 {
+    text-align: center;
+  }
+
+  .button{
+    margin-left: 30px;
+  }
+  .button:focus{
+    color:red;
+   }

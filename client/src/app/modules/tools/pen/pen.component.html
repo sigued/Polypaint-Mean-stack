@@ -1,0 +1,8 @@
+
+    <strong><p class="example-p">Min Width</p></strong>
+        <mat-slider thumbLabel color="primary" [max]="maxValue-5"
+        [min]="1" [(ngModel)]="minValue" (change)="minValueChanged()" [value]='minValue'></mat-slider>
+
+    <strong><p class="example-p">Max Width</p></strong>
+        <mat-slider thumbLabel color="primary" [max]="100"
+        [min]="1" [(ngModel)]="maxValue" (change)="maxValueChanged()" [value]='maxValue' ></mat-slider>

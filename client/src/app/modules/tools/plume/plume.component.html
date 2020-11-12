@@ -1,0 +1,9 @@
+<div class="tool-content"> 
+      <strong><p class="example-p">Line Width</p></strong>
+      <mat-slider thumbLabel color="primary" [max]="100"
+      [min]="10" [(ngModel)]="width" (change)="widthChanged()" ></mat-slider>
+
+      <mat-icon title="Rotate">rotate_right</mat-icon>
+      <mat-slider thumbLabel color="primary" [max]="360" 
+      [min]="0" [(ngModel)]="rotationAngle" (change)="rotationAngleChanged()"></mat-slider>
+</div>
